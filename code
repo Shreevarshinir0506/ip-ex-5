@@ -1,0 +1,65 @@
+<head>
+<style>
+#1{
+    height: 300px;
+    overflow-y: scroll;
+    align-items:right;
+}
+.scrollable-content{
+    height:450;/* Set the height to your desired value */
+    overflow-y: auto; /* Add a vertical scrollbar (visible if needed) */
+    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+    padding: 10px; /* Optional: Add padding for spacing */
+  }
+
+</style>
+</head>
+<body>
+    <div class="scrollable-content">
+<form id="1"><b>
+    <fieldset>
+        <legend> Employee Registration</legend>
+        &nbsp;  &nbsp;  &nbsp; EMPLOYEE ID : <input  type ='text' id="e_id" onchange="f()"> <label for=eid id='fun'style=visibility:hidden;> ERROR :Enter the valid number</label><br>
+        EMPLOYEE NAME:<input type="text" id="'name"><br><br>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+        dob:<input type="type" placeholder="dd/mm/yyyy" ><br><br>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  
+        gender:<input type="radio" name="male">male<input type="radio" name="male"> female<br><br>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+        age:<input type="number" ><br><br>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+        address:<input type="textbox" rows="4" cols="5"><br><br>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp; 
+         Qualification: <select>
+            <option>"select"</option>
+            <option> B.E</option>
+            <option> msc</option>
+        </select><br><br>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+        contact number:<input type="number" ><br><br>
+        &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;
+         Area of interest:<input type="text"><br><br>
+        &nbsp;  &nbsp; 
+        year of experience: <input type="text">
+    </fieldset><br><br>
+       &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+       <input class="a" type="submit" name="submit" value="submit">
+        <input class="a" type="reset" value="clear" name ="reset"></b>
+</form>
+
+<script>
+    function f(){
+        var a=document.getElementById("e_id").value
+        var pattern=/E00/i
+        if(!(pattern.test(a))){
+            document.getElementById('fun').style.visibility='visible'
+            document.getElementById('fun').style.color='red'
+
+
+        }
+
+
+    }
+</script>
+</div>
+</body>
